@@ -23,3 +23,8 @@
     bge $s2, 97, low
     bge $s2, 65, up
     bge $s2, 48, num
+
+    iterator:
+    addi $t3,$t3, 1
+    lb $s2, ($t3)
+    j check
