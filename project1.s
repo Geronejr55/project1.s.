@@ -10,3 +10,7 @@
     la $a0, userInput
     li $a1, 11
     syscall
+
+    load_input:
+    move $t3, $a0
+    lb $s2, ($t3)
