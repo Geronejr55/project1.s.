@@ -34,3 +34,9 @@
     sub $s2, $s2, 87
     add $s3, $s3, $s2
     j iterator
+    
+    up:
+    bge $s2, 91 iterator
+    sub $s2, $s2, 55
+    add $s3, $s3, $s2
+    j iterator
