@@ -28,3 +28,9 @@
     addi $t3,$t3, 1
     lb $s2, ($t3)
     j check
+    
+    low:
+    bge $s2, 123 iterator
+    sub $s2, $s2, 87
+    add $s3, $s3, $s2
+    j iterator
