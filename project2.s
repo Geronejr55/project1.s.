@@ -93,3 +93,10 @@ ble $t8, 1, combine
 mul $t9, $t9, 30
 addi $t8, $t8, -1
 j exp
+
+combine:
+mul $s2, $t9, $s0
+add $s1, $s1, $s2
+li $t9, 1
+j convert
+
