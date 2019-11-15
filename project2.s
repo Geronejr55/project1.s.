@@ -111,3 +111,8 @@ move $a0, $s1
 syscall
 
 j Exit
+
+invalid:
+li $v0, 4
+la $a0, result
+syscall
