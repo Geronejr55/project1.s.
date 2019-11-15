@@ -54,3 +54,10 @@ gap:
 addi $t2, $t2, 1
 mul $t3, $t3, $t7
 j during
+
+convert: 
+la $t0, data
+add $t0,$t0,$t6
+lb $s0, ($t0)
+addi $t2,$t2, -1
+addi $t6, $t6, 1
