@@ -66,3 +66,10 @@ move $t8, $t2
 ble $s0, 57, num
 ble $s0, 84, upper
 ble $s0, 116, lower
+
+num:
+li $t5, 48
+sub $s0, $s0, $t5
+beq $t2, 0, combine
+li $t9, 30
+j exp
