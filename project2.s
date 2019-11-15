@@ -19,3 +19,7 @@ beq $s0, 9, skip
 beq $s0, 32, skip
 move $t6, $t1
 j during
+
+skip:
+addi $t1, $t1, 1
+j before
