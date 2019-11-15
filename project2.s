@@ -61,3 +61,8 @@ add $t0,$t0,$t6
 lb $s0, ($t0)
 addi $t2,$t2, -1
 addi $t6, $t6, 1
+blt $t2,0,finish
+move $t8, $t2
+ble $s0, 57, num
+ble $s0, 84, upper
+ble $s0, 116, lower
