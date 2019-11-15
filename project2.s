@@ -46,3 +46,11 @@ ble $s0, 84, integer
 ble $s0, 96, special
 ble $s0, 116, integer
 bge $s0, 117, special
+
+special:
+j invalid
+
+gap:
+addi $t2, $t2, 1
+mul $t3, $t3, $t7
+j during
