@@ -100,3 +100,8 @@ add $s1, $s1, $s2
 li $t9, 1
 j convert
 
+finish:
+li $v0, 4
+la $a0, output
+syscall
+
