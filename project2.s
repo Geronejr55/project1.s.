@@ -29,3 +29,7 @@ li $t7, -1
 la $t0,data
 add $t0,$t0,$t1
 lb $s0, ($t0)
+bge $t2, 5, invalid
+bge $t3, 1, invalid
+addi $t1, $t1, 1
+j check
