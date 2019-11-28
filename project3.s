@@ -13,6 +13,7 @@ main :
 	syscall
 	
 	jal SubprogramA
+	
 continue1:
 	j print
 	
@@ -22,6 +23,7 @@ SubprogramA:
 	lw $t0, 0($sp)
 	addi $sp,$sp,4
 	move $t6, $t0
+	
 start:
 	li $t2,0 #used to check for space or tabs within the input
 	li $t7, -1 #used for invaild input
@@ -31,6 +33,11 @@ start:
 	beq $s0, 32, skip
 	move $t6, $t0
 	j loop
+	
+skip:
+	addi $t0,$t0,1
+	j start 
+
 
 
 
