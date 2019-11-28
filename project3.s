@@ -47,6 +47,13 @@ loop:
 check:
 	bgt $t2,0,invalidloop
 
+characters
+	beq $s0, 9,  gap
+	beq $s0, 32, gap
+	ble $s0, 47, invalidloop
+	ble $s0, 57, valid
+
+
 
 
 
