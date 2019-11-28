@@ -22,6 +22,11 @@ SubprogramA:
 	lw $t0, 0($sp)
 	addi $sp,$sp,4
 	move $t6, $t0
+start:
+	li $t2,0 #used to check for space or tabs within the input
+	li $t7, -1 #used for invaild input
+	lb $s0, ($t0) # loads the bit that $t0 is pointing to
+	#beq $s0, 0, finish
 
 
 
