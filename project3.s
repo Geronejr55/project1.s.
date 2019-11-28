@@ -15,5 +15,13 @@ main :
 	jal SubprogramA
 continue1:
 	j print
+	
+SubprogramA:
+	sub $sp, $sp,4
+	sw $a0, 0($sp)
+	lw $t0, 0($sp)
+	addi $sp,$sp,4
+	move $t6, $t0
+
 
 
