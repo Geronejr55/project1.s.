@@ -27,6 +27,11 @@ start:
 	li $t7, -1 #used for invaild input
 	lb $s0, ($t0) # loads the bit that $t0 is pointing to
 	#beq $s0, 0, finish
+	beq $s0, 9, skip
+	beq $s0, 32, skip
+	move $t6, $t0
+	j loop
+
 
 
 
