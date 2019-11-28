@@ -44,6 +44,8 @@ loop:
 	beq $s0, 10, substring	
 	addi $t0,$t0,1	
 	beq $s0, 44, substring
+check:
+	bgt $t2,0,invalidloop
 
 
 
