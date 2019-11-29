@@ -104,6 +104,12 @@ characters
 	li $s1,0 #sets $s1 to 0 
 	jal SubprogramB
 	lb $s0, ($t0)
+	beq $s0, 0, continue1
+	beq $s0, 10, continue1
+	beq $s0,44, invalidloop
+	li $t2,0
+	j loop
+
 
 
 
