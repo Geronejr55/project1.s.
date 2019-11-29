@@ -73,7 +73,8 @@ invalidloop:
 	addi $t0,$t0,1	
 	beq $s0, 44, insubstring
 	addi $t3, $t3,1
-
+	
+	j invalidloop
 
 
 
