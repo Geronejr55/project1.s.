@@ -139,6 +139,12 @@ num:
 	li $t9, 26		
 	j exp
 
+upper:
+	sub $s0, $s0, 55
+	beq $t3, 0, combine
+	li $t9, 26
+	j exp
+
 
 
 
