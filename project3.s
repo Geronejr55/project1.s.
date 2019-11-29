@@ -151,6 +151,12 @@ lower:
 	li $t9, 26
 	j exp
 
+exp:
+	
+	ble $t8, 1, combine
+	mul $t9, $t9, 26
+	addi $t8, $t8, -1
+	j exp
 
 
 
