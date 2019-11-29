@@ -164,6 +164,12 @@ combine:
 	add $s1,$s1,$s2
 	j continue
 
+finish: 
+	jr $ra
+
+print:
+	mul $t1,$t1,4
+	add $sp, $sp $t1
 
 
 
