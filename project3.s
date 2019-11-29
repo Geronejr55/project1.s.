@@ -52,6 +52,12 @@ characters
 	beq $s0, 32, gap
 	ble $s0, 47, invalidloop
 	ble $s0, 57, valid
+	ble $s0, 64, invalidloop
+	ble $s0, 84, valid
+	ble $s0, 96, invalidloop
+	ble $s0, 116, valid
+	bge $s0, 117, invalidloop
+
 
 
 
