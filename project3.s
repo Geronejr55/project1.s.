@@ -132,6 +132,13 @@ SubprogramC:
 	ble $s0, 57, num
 	ble $s0, 84, upper
 	ble $s0, 116, lower
+	
+num:
+	sub $s0, $s0, 48
+	beq $t3, 0, combine
+	li $t9, 26		
+	j exp
+
 
 
 
