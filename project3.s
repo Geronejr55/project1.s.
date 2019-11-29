@@ -81,6 +81,13 @@ insubstring:
 	sub $sp, $sp,4
 	
 	sw $t7, 0($sp)
+	
+	move $t6,$t0
+	lb $s0, ($t0)
+	beq $s0, 0, continue1
+	beq $s0, 10, continue1
+	beq $s0,44, invalidloop
+
 
 
 
