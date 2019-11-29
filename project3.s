@@ -93,6 +93,12 @@ insubstring:
 
 substring:
 	bgt $t2,0,insubstring
+	
+characters
+	bge $t3,5,insubstring
+	addi $t1,$t1,1	
+	sub $sp, $sp,4
+	sw $t6, 0($sp)
 
 
 
