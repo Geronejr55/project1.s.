@@ -1,4 +1,3 @@
-
 .data
 	data: .space 1001
 	output: .asciiz "\n"
@@ -28,7 +27,7 @@ start:
 	li $t2,0 #used to check for space or tabs within the input
 	li $t7, -1 #used for invaild input
 	lb $s0, ($t0) # loads the bit that $t0 is pointing to
-	#beq $s0, 0, finish
+	beq $s0, 0, finish
 	beq $s0, 9, skip
 	beq $s0, 32, skip
 	move $t6, $t0
@@ -65,6 +64,7 @@ gap:
 valid:
 	addi $t3, $t3,1
 	mul $t2,$t2,$t7
+	j loop
 
 
 
