@@ -76,6 +76,11 @@ invalidloop:
 	
 	j invalidloop
 
+insubstring:
+	addi $t1,$t1,1 	
+	sub $sp, $sp,4
+	
+	sw $t7, 0($sp)
 
 
 
