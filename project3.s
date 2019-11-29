@@ -172,17 +172,24 @@ print:
 	add $sp, $sp $t1
 
 done:	
-	sub $t1, $t1,4	#keeping track of amount of elements left
-	sub $sp,$sp,4 #moving the stack pointer to the next element
-
+	sub $t1, $t1,4
+	sub $sp,$sp,4
 		
-	lw $s7, 0($sp)	#storing that element into $s7
+	lw $s7, 0($sp)
 	
-	beq $s7,-1,invalidprint #checks to see if element is invalid
+	beq $s7,-1,invalidprint
 	
 	li $v0, 1
-	lw $a0, 0($sp) #prints element
+	lw $a0, 0($sp)
 	Syscall
+
+com:
+	beq $t1, 0,Exit
+	li $v0, 4
+	la $a0, comma
+	syscall
+	j done
+
 
 
 
