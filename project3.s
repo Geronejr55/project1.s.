@@ -144,6 +144,13 @@ upper:
 	beq $t3, 0, combine
 	li $t9, 26
 	j exp
+	
+lower:
+	sub $s0, $s0, 87
+	beq $t3, 0, combine
+	li $t9, 26
+	j exp
+
 
 
 
