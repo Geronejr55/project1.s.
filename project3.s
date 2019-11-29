@@ -189,6 +189,13 @@ com:
 	la $a0, comma
 	syscall
 	j done
+	
+invalidprint:
+	li $v0, 4
+	
+	la $a0, invalid
+	syscall	
+	j com
 
 
 
