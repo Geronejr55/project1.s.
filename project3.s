@@ -91,9 +91,11 @@ insubstring:
 	beq $s0,44, invalidloop
 	li $t3,0
 	li $t2,0
-	j loop
+	j start
 
 substring:
+	mul $t2,$t2,$t7
+next:
 	bgt $t2,0,insubstring
 	
 characters
@@ -110,7 +112,7 @@ characters
 	beq $s0, 10, continue1
 	beq $s0,44, invalidloop
 	li $t2,0
-	j loop
+	j start
 
 SubprogramB:
 	beq $t3,0,finish
