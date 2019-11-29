@@ -197,6 +197,11 @@ invalidprint:
 	syscall	
 	j com
 
+Exit:
+	li $v0, 10
+	syscall
+
+
 
 
 
