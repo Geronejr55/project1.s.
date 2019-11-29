@@ -66,6 +66,13 @@ valid:
 	mul $t2,$t2,$t7
 	j loop
 
+invalidloop:
+	lb $s0, ($t0)
+	beq $s0, 0, insubstring
+	beq $s0, 10, insubstring 	
+	addi $t0,$t0,1	
+	beq $s0, 44, insubstring
+	addi $t3, $t3,1
 
 
 
