@@ -87,6 +87,13 @@ insubstring:
 	beq $s0, 0, continue1
 	beq $s0, 10, continue1
 	beq $s0,44, invalidloop
+	li $t3,0
+	li $t2,0
+	j loop
+
+substring:
+	bgt $t2,0,insubstring
+
 
 
 
