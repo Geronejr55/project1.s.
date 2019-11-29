@@ -41,8 +41,8 @@ skip:
 	
 loop:
 	lb $s0, ($t0)
-	beq $s0, 0, substring
-	beq $s0, 10, substring	
+	beq $s0, 0, next
+	beq $s0, 10, next	
 	addi $t0,$t0,1	
 	beq $s0, 44, substring
 check:
@@ -123,6 +123,14 @@ SubprogramB:
 continue:
 	sw $s1,0($sp)
 	j SubprogramB
+	
+SubprogramC:
+	move $t8, $t3
+	li $t9, 1
+	ble $s0, 57, num
+	ble $s0, 84, upper
+	ble $s0, 116, lower
+
 
 
 
